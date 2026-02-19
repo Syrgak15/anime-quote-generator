@@ -2,10 +2,10 @@ import ResultFieldClientComponent from "@/components/ResultField/ResultFieldClie
 
 export default async function ResultFieldServerComponent() {
 
-    let response = await fetch("https://api.animechan.io/v1/quotes/random");
+    let response = await fetch("https://kitagawachan-api.vercel.app/quotes/random");
     let result = await response.json();
 
     return (
-        <ResultFieldClientComponent quote={result}/>
+        <ResultFieldClientComponent initialQuote={result}/>
     )
 }

@@ -1,18 +1,19 @@
+
 import type { Quote } from '@/interfaces/Quotes';
 
 interface QuotesProps {
-    quote: Quote;
+    initialQuote: Quote;
 }
 
-export default function ResultFieldClientComponent({quote}: QuotesProps) {
+export default function ResultFieldClientComponent({initialQuote}: QuotesProps) {
     return (
         <div className="result-field flex justify-center mt-[100px]">
             <div className="container max-w-[900px] text-center gap-3 text-white font-mono">
-                <div className="generator-field__quote">
-                    <p>{quote.data.anime.altName}</p>
+                <div className="generator-field__quote text-[40px]">
+                    <p>{initialQuote.quote}</p>
                 </div>
-                <div className="generator-field__author">
-                    <span>{quote.data.character}</span>
+                <div className="generator-field__author text-[15px]">
+                    <span>- {initialQuote.character}</span>
                 </div>
             </div>
         </div>

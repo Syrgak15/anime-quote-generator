@@ -2,6 +2,8 @@ import GeneratorField from "@/components/GeneratorField/GeneratorField";
 import ResultFieldServerComponent from "@/components/ResultField/ResultFieldServerComponent";
 
 export default function Home() {
+
+
   return (
       <div
           className="quote min-h-screen bg-cover bg-center"

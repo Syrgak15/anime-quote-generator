@@ -1,10 +1,7 @@
 export interface Quote {
-    data: {
-        anime: {
-            altName: string,
-            name: string;
-        },
-        character: string,
-        content: string;
-    }
+    anime: string;
+    character: string;
+    quote: string;
+    _id?: string;
+    __v?: number;
 }
