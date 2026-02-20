@@ -6,6 +6,7 @@ interface QuotesProps {
 }
 
 export default function ResultFieldClientComponent({initialQuote}: QuotesProps) {
+
     return (
         <div className="result-field flex justify-center mt-[100px]">
             <div className="container max-w-[900px] text-center gap-3 text-white font-mono">

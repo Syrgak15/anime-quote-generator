@@ -1,8 +1,10 @@
 import GeneratorField from "@/components/GeneratorField/GeneratorField";
-import ResultFieldServerComponent from "@/components/ResultField/ResultFieldServerComponent";
+import getQuotes from "../actions/action";
+import ResultFieldClientComponent from "@/components/ResultField/ResultFieldClientComponent";
 
-export default function Home() {
+export default async function Home() {
 
+  const result = await getQuotes()
 
   return (
       <div
@@ -11,10 +13,10 @@ export default function Home() {
       >
           <div className="quote__content relative z-10">
               <div className="quote__generator-field pt-[10px]">
-                    <GeneratorField />
+                    <GeneratorField/>
               </div>
               <div className="quote__result-field pt-[10px]">
-                     <ResultFieldServerComponent/>
+                  <ResultFieldClientComponent initialQuote={result}/>
               </div>
           </div>
       </div>
