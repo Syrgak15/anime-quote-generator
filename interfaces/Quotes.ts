@@ -1,7 +1,6 @@
 export interface Quote {
-    anime: string;
-    character: string;
-    quote: string;
-    _id?: string;
-    __v?: number;
+    quoteanime: string;
+    quotecharacter: string;
+    quotesentence: string;
+    quotenumber?: string;
 }

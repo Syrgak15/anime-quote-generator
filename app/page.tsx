@@ -4,7 +4,9 @@ import ResultFieldClientComponent from "@/components/ResultField/ResultFieldClie
 
 export default async function Home() {
 
-  const result = await getQuotes()
+  const response = await getQuotes();
+
+  const result = response[Math.floor(Math.random() * response.length)];
 
   return (
       <div
